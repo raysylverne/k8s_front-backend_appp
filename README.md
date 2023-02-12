@@ -89,7 +89,7 @@
 
 ## Future Updates
 
-- [ ] Adding a website
+- [ ] Add a JSON website that will pull and push data into database
 
 ## Author
 
