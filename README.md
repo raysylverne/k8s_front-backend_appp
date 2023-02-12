@@ -1,72 +1,104 @@
-# <h1 align="center">Deploy A Front & Backend App on Kubernetes</h1>  
+<h1 align="center">Deploy A Front & Backend App on Kubernetes</h1>
 
-<p align="center"><Deploy an entire end-to-end application using MongoDB and Mongo Express on Kubernetes.></p>
+<p >Project Description: Deploy an end-to-end application using MongoDB and Mongo Express on Kubernetes</p>
 
 ## Links
 
-- [Repo](https://github.com/Rohit19060/<project-name> "<project-name> Repo")
-
-- [Live](<Homepage url> "Live View")
-
-- [Bugs](https://github.com/Rohit19060/<project-name>/issues "Issues Page")
-
-- [API](<API Link> "API")
+- [Repo](https://github.com/raysylverne/mongodb_app "<mongo-app> Repo")
 
 ## Screenshots
+<img width="1022" alt="8" src="https://user-images.githubusercontent.com/111945210/218289833-7882a758-c362-407b-a758-edc8a9a3187b.png">
 
-![Home Page](/screenshots/1.png "Home Page")
+<img width="1167" alt="9" src="https://user-images.githubusercontent.com/111945210/218289780-6b52a01b-db77-4439-9ff8-8c26e9bd5d2b.png">
 
-![](/screenshots/2.png)
 
-![](/screenshots/3.png)
+## Commands
 
-## Available Commands
+### install hyperhit and minikube
+`brew update`
 
-In the project directory, you can run:
+`brew install hyperkit`
 
-### `npm start" : "react-scripts start"`,
+`brew install minikube`
 
-The app is built using `create-react-app` so this command Runs the app in Development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser. You also need to run the server file as well to completely run the app. The page will reload if you make edits.
-You will also see any lint errors in the console.
+`kubectl`
 
-### `"npm run build": "react-scripts build"`,
+`minikube`
 
-Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes. Your app will be ready to deploy!
+### create minikube cluster
+`minikube start --vm-driver=hyperkit`
 
-### `"npm run test": "react-scripts test"`,
+`kubectl get nodes`
 
-Launches the test runner in the interactive watch mode.
+`minikube status`
 
-### `"npm run dev": "concurrently "nodemon server" "npm run start"`,
+`kubectl version`
 
-For running the server and app together I am using concurrently this helps a lot in the MERN application as it runs both the server (client and server) concurrently. So you can work on them both together.
+### delete cluster and restart in debug mode
+`minikube delete`
 
-### `"serve": "node server"`
+`minikube start --vm-driver=hyperkit`
 
-For running the server file on you can use this command.
+`minikube status`
 
-### `npm run serve`
+### kubectl commands
+`kubectl get nodes`
 
-## Built With
+`kubectl get pod`
 
-- JavaScript
-- Node
-- NPM
-- Webpack
-- HTML
-- CSS
+`kubectl get services`
+
+`kubectl create deployment nginx-depl --image=nginx`
+
+`kubectl get deployment`
+
+`kubectl get replicaset`
+
+### debugging
+`kubectl logs {pod-name}`
+
+`kubectl exec -it {pod-name} -- bin/bash`
+
+### create mongo deployment
+`kubectl create deployment mongo-depl --image=mongo`
+
+`kubectl logs mongo-depl-{pod-name}`
+
+`kubectl describe pod mongo-depl-{pod-name}`
+
+### delete deplyoment
+`kubectl delete deployment mongo-depl`
+
+`kubectl delete deployment nginx-depl`
+
+### create or edit config file
+`vim nginx-deployment.yaml`
+
+`kubectl apply -f nginx-deployment.yaml`
+
+`kubectl get pod`
+
+`kubectl get deployment`
+
+### delete with config
+`kubectl delete -f nginx-deployment.yaml`
+
+#Metrics
+
+`kubectl top` The kubectl top command returns current CPU and memory usage for a cluster’s pods or nodes, or for a particular pod or node if specified.
 
 ## Future Updates
 
-- [ ] Reliable Storage
+- [ ] Adding a website
 
 ## Author
 
-**Rohit Jain**
+**Raymond Sylverne**
 
-- [Profile](https://github.com/rohit19060 "Rohit jain")
-- [Email](mailto:rohitjain19060@gmail.com?subject=Hi "Hi!")
-- [Website](https://kingtechnologies.in "Welcome")
+- [Profile](https://github.com/raysylverne "Raymond Sylverne")
+- [Email](mailto:raysylverne@gmail.com?subject=Hi "Hi!")
+- [Website](https://medium.com/@RaySylverne "Welcome")
+- [LinkedIn](
 
 ## 🤝 Support
 
