@@ -1,6 +1,6 @@
 # <h1 align="center">Deploy A Front & Backend App on Kubernetes</h1>  
 
-<p align="center"><project-description></p>
+<p align="center"><Deploy an entire end-to-end application using MongoDB and Mongo Express on Kubernetes.></p>
 
 ## Links
 
