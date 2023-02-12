@@ -98,7 +98,7 @@
 - [Profile](https://github.com/raysylverne "Raymond Sylverne")
 - [Email](mailto:raysylverne@gmail.com?subject=Hi "Hi!")
 - [Website](https://medium.com/@RaySylverne "Welcome")
-- [LinkedIn](
+- [LinkedIn](https://www.linkedin.com/in/ray-sylverne/)
 
 ## 🤝 Support
 
